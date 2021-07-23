@@ -1,5 +1,183 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-family: 'Rubik', sans-serif;
+  background: black;
+  color: white;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+}
+
+a:hover{
+  color: #ccc;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+h3{
+  font-size: 26px;
+  font-weight: 300;
+}
+
+h4{
+  color: #00ed82;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.btn{
+  display: inline-block;
+  background: white;
+  color: #333;
+  min-width: 135px;
+  padding: 20px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 14px;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-cta:hover{
+  opacity: 0.8;
+}
+
+
+.btn-outline{
+  background: none;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover{
+  color: white;
+  border-color: #ccc;
+}
+.legal-text{
+  font-size: 10px;
+  color: #cccc;
+  margin-top: 20px;
+}
+
+.sub-link{
+  display: block;
+  color: #ccc;
+  font-size: 12px;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+/* Header */
+.header{
+  height: 530px;
+  background: url(../img/header.jpg)
+  no-repeat center center / cover;
+}
+.header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+}
+
+.header nav .login-btn{
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.header .logo {
+  width: 280px;
+  margin: 20px 0;
+}
+
+header .header-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.header .header-text-1{
+  font-size: 22px;
+  font-weight: bold;
+}
+.header .header-text-2{
+  font-size: 18px;
+  margin: 25px;
+}
+
+
+/* Sub-Header */
+/* gradient copied from hulu site via inspection of this section */
+.sub-header{
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  gap: 40px;
+  align-items: center;
+  padding: 30px 40px;
+  background: linear-gradient(
+    318.68deg,
+    #0f495c 0%,
+    #0d3640 49.72%,
+    #08141f 100%
+  );
+}
+
+.sub-header > div:last-of-type {
+  /* this refers to last div in this sub header */
+  justify-self: end;
+  align-self: end;
+}
+
+.sub-header > div:last-of-type .sub-link {
+  /* refers to sub-link within this div */
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  .header .logo{
+    width: 200px;
+  }
+  .header .header-content{
+    text-align: center;
+    padding: 0 20px;
+  }
+  .sub-header{
+    grid-template-columns: 1fr;
+  }
+  .sub-header img{
+    width: 250px;
+    margin: auto;
+  }
+}
+
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -105,7 +283,7 @@ h4 {
 }
 
 /* Header */
-.header {
+/* .header {
   height: 530px;
   background: url(../img/header.jpg) no-repeat center center / cover;
 }
@@ -167,7 +345,7 @@ h4 {
   );
 }
 
-/* Sub Header */
+/* Sub Header 
 .sub-header {
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
@@ -191,7 +369,7 @@ h4 {
   text-align: center;
 }
 
-/* Categories */
+/* Categories 
 .categories {
   display: flex;
   flex-direction: column;
@@ -248,7 +426,7 @@ h4 {
   background: url('../img/cover-4.jpg') no-repeat center center / cover;
 }
 
-/* Live */
+Live 
 .live {
   background: #151516;
   padding: 40px;
@@ -272,7 +450,7 @@ h4 {
   text-decoration: underline;
 }
 
-/* Live Sports */
+/* Live Sports 
 .live-sports {
   background: url('../img/live-sports.jpg') no-repeat center center / cover;
   height: 800px;
@@ -307,7 +485,7 @@ h4 {
   width: 40px;
 }
 
-/* Footer */
+/* Footer 
 .footer {
   background: #ebedf2;
   color: #333;
@@ -347,7 +525,7 @@ h4 {
   margin-right: 25px;
 }
 
-/* Modal */
+/* Modal 
 .modal {
   display: none;
   position: fixed;
@@ -412,7 +590,7 @@ h4 {
   color: steelblue;
 }
 
-/* Form */
+/* Form 
 .form-control {
   margin: 20px 0;
 }
@@ -430,7 +608,7 @@ h4 {
   padding: 5px;
 }
 
-/* Media Queries */
+/* Media Queries 
 @media (max-width: 1100px) {
   .categories .covers {
     grid-template-columns: 1fr 1fr;
@@ -506,4 +684,5 @@ h4 {
   .modal .modal-box {
     width: 350px;
   }
-}
+} -->
+*/
